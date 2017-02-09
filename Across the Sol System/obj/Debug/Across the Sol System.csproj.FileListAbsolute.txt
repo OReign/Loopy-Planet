@@ -1,0 +1,6 @@
+c:\users\oraine\documents\visual studio 2015\Projects\Across the Sol System\Across the Sol System\bin\Debug\Across the Sol System.exe.config
+c:\users\oraine\documents\visual studio 2015\Projects\Across the Sol System\Across the Sol System\obj\Debug\Across the Sol System.csprojResolveAssemblyReference.cache
+c:\users\oraine\documents\visual studio 2015\Projects\Across the Sol System\Across the Sol System\bin\Debug\Across the Sol System.exe
+c:\users\oraine\documents\visual studio 2015\Projects\Across the Sol System\Across the Sol System\bin\Debug\Across the Sol System.pdb
+c:\users\oraine\documents\visual studio 2015\Projects\Across the Sol System\Across the Sol System\obj\Debug\Across the Sol System.exe
+c:\users\oraine\documents\visual studio 2015\Projects\Across the Sol System\Across the Sol System\obj\Debug\Across the Sol System.pdb
