@@ -10,39 +10,10 @@ namespace Across_the_Sol_System
     {
         static void Main(string[] args)
         {
-            /*
-            //String 1;
-            //String 2;
-            //String 3;
-            //String 4;
-            //String 5;
-            //String 6;
-            //String 7;
-            //String 8;
-            //String 9;
-            //This string represents the number denotation of each planet
+            
 
-            double Mercury;
-            double Venus;
-            double Earth;
-            double Mars;
-            double Jupiter;
-            double Saturn;
-            double Uranus;
-            double Neptune;
-            double Pluto;
-            double mercury;
-            double venus;
-            double earth;
-            double mars;
-            double jupiter;
-            double saturn;
-            double uranus;
-            double neptune;
-            double pluto;
-            //This set was made to account for is the user typed the name rather than the number
-
-            Mercury, mercury = 0.37;
+            /* For the sake of refrence, here are the constants
+             * Mercury, mercury = 0.37;
             Venus, venus = 0.88;
             Earth, earth = 1;
             Mars, mars = 0.38;
@@ -64,22 +35,33 @@ namespace Across_the_Sol_System
 
             Console.WriteLine();
 
-            int condition = 1;
+            /*The above is the simple starting menu that displays the planet option for the user*/
+
+            int condition = 1; //this condition is for the while loop determination, used at the end.
             do
             {
                 int planet;
-            Console.WriteLine("\n Which planet are you curious about? Pick one of the numbers!: ");
-            planet = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("\n Which planet are you curious about? Pick one of the numbers!");
+                Console.WriteLine("Numbers only now! Don't say I didn't warn you!");
+                planet = Convert.ToInt32(Console.ReadLine());
 
-            double userWeight;
-            //Console.WriteLine("\n How many pounds do you weigh on Earth?: ");
-            //userWeight = Convert.ToDouble(Console.ReadLine());
-            double ratio = 0.0;
-            double result;
+                /*This while loop is set to be condition on the int variable contition. The loop itself
+             contained a switch statement. The variable 'planet is converted to an integer from the user
+             input and used to determine which case to run. If they pick one outside of 1-9, the default runs 
+             which sends them back to start of the loop.  I added that extra bit to warn the user as I was unable
+             to find a means to limit input to digits only.
+                */
 
-            /* The previous block of code is */
+
+                double userWeight;
+                double ratio = 0.0;
+                double result;
+
+                /* The variables initialized, userWeight for the input values, ratio used in each case for the 
+                 * gravity factor and result for the calculated weight */
 
                 switch (planet)
+                //This is the start of the switch statement containing the 8 planets and exit statement
                 {
                     case 1:
                         ratio = 0.37;
@@ -88,6 +70,9 @@ namespace Across_the_Sol_System
                         result = ratio * userWeight;
                         Console.WriteLine("Let me see... on Mercury you weigh " + result + "lbs");
                         break;
+                    /*this structure continues through the block, requesting the weight, converting it to 
+                    a double, using the new decimal to calculate the weight with the ratio variable.
+                    Once that is done, the program outputs a code the weight (result) to the user*/
 
                     case 2:
                         ratio = 0.88;
@@ -147,37 +132,33 @@ namespace Across_the_Sol_System
 
                     case 9:
                         Console.WriteLine("No thanks? No thanks? Mean... see if I ever help you with anything...");
-                        //Console.WriteLine("Are... are you sure? [Y/N]");
-                        //Console
-                        condition = ++condition;
-                        break;
+                        Console.WriteLine("Are... are you sure? [Y/N]");
+                        if (Console.ReadLine() == "Y")
+                        {
+                            condition = ++condition;
+                            break;
+                        }
+                        else
+                        {
+                            Console.WriteLine("Huzzah! Let's keep going!");
+                            break; }
+                        /*My exit statement is two staged. Selecting case 9 bring up the choice to exit,
+                         with an if loop in place in case they entered it by mistake, giving them the option
+                         to continue the while loop without ending it. If they select Y, the contidition variable
+                         set up earlier is increased by 1, thereby ending the while loop.*/
 
                     default:
                         Console.WriteLine("Oi! That's not on the list! Try again.");
                         break;
+                        /* A simple default that is triggered if they enter a value outside of 1-9 */
                 }
             } while (condition <= 1);
+            /* As mentioned, the do while loop continues only if the condition variable is 1 or lower. 
+             Case 9 has the means of ending the loop*/
 
             Console.WriteLine("Good day to you!");
-
-
-            //Console.ReadLine();
-
-            /* Mercury, mercury = 0.37;
-            Venus, venus = 0.88;
-            Earth, earth = 1;
-            Mars, mars = 0.38;
-            Jupiter, jupiter = 2.64;
-            Saturn, saturn = 1.15;
-            Uranus, uranus = 1.15;
-            Neptune, neptune = 1.12;
-            Pluto, pluto = 0.04;
-            */
-
-            //Write user selection here, move selection on from here to the next step of requesting weight
-            //Take weight and selection and input them in the switch statement
-            //Nine switch statemts, one for each planet and the default to exi
-
+            Console.ReadLine();
+            //A simple goodbye
 
         }
     }
